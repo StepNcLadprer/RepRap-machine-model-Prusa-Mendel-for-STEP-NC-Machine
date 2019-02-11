@@ -1,0 +1,39 @@
+<machine name="Prusa Mendel i2 - 3D printer" 
+         description="Prusa Mendel i2 - 3D printer" 
+         algorithm="3-axis" >
+
+<default file="PRUSA-MENDEL-I2.step" />
+
+<geometry shape_eid="34323" />
+
+<chain target="tool">
+  <axis name="z" min="0" max="80">
+    <geometry shape_eid="155167" />
+  </axis>
+  
+  <axis name="x" min="0" max="180">
+    <geometry shape_eid="135731" />
+	<geometry shape_eid="116433" />
+	<geometry shape_eid="256716" />
+  </axis>
+
+  <placement>
+    <location component="xy" shape_eid="135731" face_eid="131120"/>
+    <location component="z" shape_eid="135731" face_eid="207624"/>
+  </placement>
+
+</chain>
+
+<chain target="workpiece" >
+  <axis name="y" min="0" max="180">
+    <geometry shape_eid="14967" />
+  </axis>
+
+  <placement location="0 0 0">
+	<location component="xy" shape_eid="14967" face_eid="44573"/>
+	<location component="z" shape_eid="14967" face_eid="114552"/>
+  </placement>
+  
+</chain>
+
+</machine>
